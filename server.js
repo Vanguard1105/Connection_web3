@@ -51,12 +51,12 @@ app.post("/RPC-Connect", async (req, res) => {
     // Respond with success message
     res
       .status(201)
-      .json({ message: "Private key saved successfully", data: newPrivateKey });
+      .json({ message: "SHYFT RPC setting completed!", data: newPrivateKey });
   } catch (error) {
     console.error("Error saving private key:", error);
     res
       .status(500)
-      .json({ error: "An error occurred while saving the private key" });
+      .json({ error: "An error occurred while setting SHYFT RPC" });
   }
 });
 
